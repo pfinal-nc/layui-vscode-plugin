@@ -4,7 +4,7 @@
 
 ### 使用方式
 
-![](/images/help.gif)
+![](https://nero_xeizi.gitee.io/pic/help.gif)
 
 ### 代码地址:
 
