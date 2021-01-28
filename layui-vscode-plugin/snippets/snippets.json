@@ -1,1 +1,32 @@
-{"_G":{"body":"_G(${0:...})","description":"_G","prefix":"_G"}}
+{
+    "layui CDN": {
+        "body": "<link rel=\"stylesheet\" media=\"screen\" href=\"https://www.layuicdn.com/layui-v2.5.6/css/layui.css\">\n<script src=\"https://www.layuicdn.com/layui-v2.5.6/layui.js\"></script>",
+        "description": "layui CDN",
+        "prefix": "lay-cdn"
+    },
+    "layui container 容器": {
+        "body": "<div class=\"layui-container\">\n</div>",
+        "description": "layui container 容器",
+        "prefix": "lay-con"
+    },
+    "layui row": {
+        "body": "<div class=\"layui-row\">\n</div>",
+        "description": "layui container 容器",
+        "prefix": "lay-row"
+    },
+    "layui row container 容器": {
+        "body": "<div class=\"layui-container\">\n  <div class=\"layui-row\">\n  </div>\n</div>",
+        "description": "layui row container 容器",
+        "prefix": "lay-rcon"
+    },
+    "layui 卡片面板": {
+        "body": "<div class=\"layui-card\">\n   <div class=\"layui-card-header\">卡片面板</div>\n   <div class=\"layui-card-body\">\n    卡片式面板面板通常用于非白色背景色的主体内\n    从而映衬出边框投影\n  </div>\n</div>",
+        "description": "layui 卡片面板",
+        "prefix": "lay-card"
+    },
+    "layui 折叠面板": {
+        "body": "<div class=\"layui-collapse\">\n    <div class=\"layui-colla-item\">\n    <h2 class=\"layui-colla-title\">杜甫</h2>\n  <div class=\"layui-colla-content layui-show\">内容区域</div>\n</div>\n    <div class=\"layui-colla-item\">\n  <h2 class=\"layui-colla-title\">李清照</h2>\n<div class=\"layui-colla-content layui-show\">内容区域</div>\n</div>\n<div class=\"layui-colla-item\">\n<h2 class=\"layui-colla-title\">鲁迅</h2>\n<div class=\"layui-colla-content layui-show\">内容区域</div>\n</div>\n</div>\n<script>\n//注意：折叠面板 依赖 element 模块，否则无法进行功能性操作\nlayui.use('element', function(){\nvar element = layui.element;\n//…\n});\n</script>",
+        "description": "layui 折叠面板",
+        "prefix": "lay-collapse"
+    }
+}
