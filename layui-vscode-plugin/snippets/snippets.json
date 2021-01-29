@@ -28,5 +28,95 @@
         "body": "<div class=\"layui-collapse\">\n    <div class=\"layui-colla-item\">\n    <h2 class=\"layui-colla-title\">杜甫</h2>\n  <div class=\"layui-colla-content layui-show\">内容区域</div>\n</div>\n    <div class=\"layui-colla-item\">\n  <h2 class=\"layui-colla-title\">李清照</h2>\n<div class=\"layui-colla-content layui-show\">内容区域</div>\n</div>\n<div class=\"layui-colla-item\">\n<h2 class=\"layui-colla-title\">鲁迅</h2>\n<div class=\"layui-colla-content layui-show\">内容区域</div>\n</div>\n</div>\n<script>\n//注意：折叠面板 依赖 element 模块，否则无法进行功能性操作\nlayui.use('element', function(){\nvar element = layui.element;\n//…\n});\n</script>",
         "description": "layui 折叠面板",
         "prefix": "lay-collapse"
+    },
+    "layui 按钮": {
+        "body": "<button type=\"button\" class=\"layui-btn\">默认按钮</button>",
+        "description": "layui 普通按钮",
+        "prefix": "lay-btn"
+    },
+    "layui 百搭按钮": {
+        "body": "<button type=\"button\" class=\"layui-btn layui-btn-normal\">默认按钮</button>",
+        "description": "layui 百搭按钮",
+        "prefix": "lay-btn:normal"
+    },
+    "layui 暖色按钮": {
+        "body": "<button type=\"button\" class=\"layui-btn layui-btn-warm\">默认按钮</button>",
+        "description": "layui 暖色按钮",
+        "prefix": "lay-btn:warm"
+    },
+    "layui 警告按钮": {
+        "body": "<button type=\"button\" class=\"layui-btn layui-btn-danger\">默认按钮</button>",
+        "description": "layui 警告按钮",
+        "prefix": "lay-btn:danger"
+    },
+    "layui 禁用按钮": {
+        "body": "<button type=\"button\" class=\"layui-btn layui-btn-disabled\">默认按钮</button>",
+        "description": "layui 禁用按钮",
+        "prefix": "lay-btn:disabled"
+    },
+    "layui 大型按钮": {
+        "body": "<button type=\"button\" class=\"layui-btn layui-btn-lg\">大型按钮</button>",
+        "description": "layui 大型按钮",
+        "prefix": "lay-btn:lg"
+    },
+    "layui 小型按钮": {
+        "body": "<button type=\"button\" class=\"layui-btn layui-btn-sm\">小型按钮</button>",
+        "description": "layui 小型按钮",
+        "prefix": "lay-btn:sm"
+    },
+    "layui 迷你按钮": {
+        "body": "<button type=\"button\" class=\"layui-btn layui-btn-xs\">迷你按钮</button>",
+        "description": "layui 迷你按钮",
+        "prefix": "lay-btn:xs"
+    },
+    "layui 流体按钮": {
+        "body": " <div style=\"width: 216px; margin: 0;\">\n    <button type=\"button\" class=\"layui-btn layui-btn-fluid\">流体按钮</button>\n</div>",
+        "description": "layui 流体按钮",
+        "prefix": "lay-btn:fluid"
+    },
+    "layui 按钮组": {
+        "body": "<div class=\"layui-btn-group\">\n  <button type=\"button\" class=\"layui-btn\">增加</button>\n<button type=\"button\" class=\"layui-btn\">编辑</button>\n<button type=\"button\" class=\"layui-btn\">删除</button>\n</div>",
+        "description": "layui 按钮组",
+        "prefix": "lay-btn:group"
+    },
+    "layui 表单": {
+        "body": "<form class=\"layui-form\" action=\"\">\n  <div class=\"layui-form-item\">\n    <label class=\"layui-form-label\">单行输入框</label>\n    <div class=\"layui-input-block\">\n      <input type=\"text\" name=\"title\" lay-verify=\"title\" autocomplete=\"off\" placeholder=\"请输入标题\" class=\"layui-input\">\n    </div>\n  </div>\n  <div class=\"layui-form-item\">\n    <label class=\"layui-form-label\">验证必填项</label>\n    <div class=\"layui-input-block\">\n      <input type=\"text\" name=\"username\" lay-verify=\"required\" lay-reqtext=\"用户名是必填项，岂能为空？\" placeholder=\"请输入\" autocomplete=\"off\" class=\"layui-input\">\n    </div>\n  </div>\n  \n  <div class=\"layui-form-item\">\n    <div class=\"layui-inline\">\n      <label class=\"layui-form-label\">验证手机</label>\n      <div class=\"layui-input-inline\">\n        <input type=\"tel\" name=\"phone\" lay-verify=\"required|phone\" autocomplete=\"off\" class=\"layui-input\">\n      </div>\n    </div>\n    <div class=\"layui-inline\">\n      <label class=\"layui-form-label\">验证邮箱</label>\n      <div class=\"layui-input-inline\">\n        <input type=\"text\" name=\"email\" lay-verify=\"email\" autocomplete=\"off\" class=\"layui-input\">\n      </div>\n    </div>\n  </div>\n  \n  <div class=\"layui-form-item\">\n    <div class=\"layui-inline\">\n      <label class=\"layui-form-label\">多规则验证</label>\n      <div class\"layui-input-inline\">\n        <input type=\"text\" name=\"number\" lay-verify=\"required|number\" autocomplete=\"off\" class=\"layui-input\">\n      </div>\n    </div>\n    <div class=\"layui-inline\">\n      <label class=\"layui-form-label\">验证日期</label>\n      <div class=\"layui-input-inline\">\n        <input type=\"text\" name=\"date\" id=\"date\" lay-verify=\"date\" placeholder=\"yyyy-MM-dd\" autocomplete=\"off\" class=\"layui-input\">\n      </div>\n    </div>\n    <div class=\"layui-inline\">\n      <label class=\"layui-form-label\">验证链接</label>\n      <div class=\"layui-input-inline\">\n        <input type=\"tel\" name=\"url\" lay-verify=\"url\" autocomplete=\"off\" class=\"layui-input\">\n      </div>\n    </div>\n  </div>\n  \n  <div class=\"layui-form-item\">\n    <label class=\"layui-form-label\">验证身份证</label>\n    <div class=\"layui-input-block\">\n      <input type=\"text\" name=\"identity\" lay-verify=\"identity\" placeholder=\"\" autocomplete=\"off\" class=\"layui-input\">\n    </div>\n  </div>\n  <div class=\"layui-form-item\">\n    <label class=\"layui-form-label\">自定义验证</label>\n    <div class=\"layui-input-inline\">\n      <input type=\"password\" name=\"password\" lay-verify=\"pass\" placeholder=\"请输入密码\" autocomplete=\"of\" class=\"layui-input\">\n    </div>\n    <div class=\"layui-form-mid layui-word-aux\">请填写6到12位密码</div>\n  </div>\n  \n  <div class=\"layui-form-item\">\n    <div class=\"layui-inline\">\n      <label class=\"layui-form-label\">范围</label>\n      <div class=\"layui-input-inline\" style=\"width: 100px;\">\n        <input type=\"text\" name=\"price_min\" placeholder=\"￥\" autocomplete=\"off\" class=\"layui-input\">\n      </div>\n      <div class=\"layui-form-mid\">-</div>\n      <div class=\"layui-input-inline\" style=\"width: 100px;\">\n        <input type=\"text\" name=\"price_max\" placeholder=\"￥\" autocomplete=\"off\" class=\"layui-input\">\n      </div>\n    </div>\n  </div>\n  \n  <div class=\"layui-form-item\">\n    <label class=\"layui-form-label\">单行选择框</label>\n    <div class=\"layui-input-block\">\n      <select name=\"interest\" lay-filter=\"aihao\">\n        <option value=\"\"></option>\n        <option value=\"0\">写作</option>\n        <option value=\"1\" selected=\"\">阅读</option>\n        <option value=\"2\">游戏</option>\n        <option value=\"3\">音乐</option>\n        <option value=\"4\">旅行</option>\n      </select>\n    </div>\n  </div>\n  \n  \n  <div class=\"layui-form-item\">\n    <div class=\"layui-inline\">\n      <label class=\"layui-form-label\">分组选择框</label>\n      <div class=\"layui-input-inline\">\n        <select name=\"quiz\">\n          <option value=\"\">请选择问题</option>\n          <optgroup label=\"城市记忆\">\n            <option value=\"你工作的第一个城市\">你工作的第一个城市</option>\n          </optgroup>\n          <optgroup label=\"学生时代\">\n            <option value=\"你的工号\">你的工号</option>\n            <option value=\"你最喜欢的老师\">你最喜欢的老师</option>\n          </optgroup>\n        </select>\n      </div>\n    </div>\n    <div class=\"layui-inline\">\n      <label class=\"layui-form-label\">搜索选择框</label>\n      <div class=\"layui-input-inline\">\n        <select name=\"modules\" lay-verify=\"required\" lay-search=\"\">\n          <option value=\"\">直接选择或搜索选择</option>\n          <option value=\"1\">layer</option>\n          <option value=\"2\">form</option>\n          <option value=\"3\">layim</option>\n          <option value=\"4\">element</option>\n          <option value=\"5\">laytpl</option>\n          <option value=\"6\">upload</option>\n          <option value=\"7\">laydate</option>\n          <option value=\"8\">laypage</option>\n          <option value=\"9\">flow</option>\n          <option value=\"10\">util</option>\n          <option value=\"11\">code</option>\n          <option value=\"12\">tree</option>\n          <option value=\"13\">layedit</option>\n          <option value=\"14\">nav</option>\n          <option value=\"15\">tab</option>\n          <option value=\"16\">table</option>\n          <option value=\"17\">select</option>\n          <option value=\"18\">checkbox</option>\n          <option value=\"19\">switch</option>\n          <option value=\"20\">radio</option>\n        </select>\n      </div>\n    </div>\n  </div>\n  \n  <div class=\"layui-form-item\">\n    <label class=\"layui-form-label\">联动选择框</label>\n    <div class=\"layui-input-inline\">\n      <select name=\"quiz1\">\n        <option value=\"\">请选择省</option>\n        <option value=\"浙江\" selected=\"\">浙江省</option>\n        <option value=\"你的工号\">江西省</option>\n        <option value=\"你最喜欢的老师\">福建省</option>\n      </select>\n    </div>\n    <div class=\"layui-input-inline\">\n      <select name=\"quiz2\">\n        <option value=\"\">请选择市</option>\n        <option value=\"杭州\">杭州</option>\n        <option value=\"宁波\" disabled=\"\">宁波</option>\n        <option value=\"温州\">温州</option>\n        <option value=\"温州\">台州</option>\n        <option value=\"温州\">绍兴</option>\n      </select>\n    </div>\n    <div class=\"layui-input-inline\">\n      <select name=\"quiz3\">\n        <option value=\"\">请选择县/区</option>\n        <option value=\"西湖区\">西湖区</option>\n        <option value=\"余杭区\">余杭区</option>\n        <option value=\"拱墅区\">临安市</option>\n      </select>\n    </div>\n    <div class=\"layui-form-mid layui-word-aux\">此处只是演示联动排版，并未做联动交互</div>\n  </div>\n  \n  <div class=\"layui-form-item\">\n    <label class=\"layui-form-label\">复选框</label>\n    <div class=\"layui-input-block\">\n      <input type=\"checkbox\" name=\"like[write]\" title=\"写作\">\n      <input type=\"checkbox\" name=\"like[read]\" title=\"阅读\" checked=\"\">\n      <input type=\"checkbox\" name=\"like[game]\" title=\"游戏\">\n    </div>\n  </div>\n  \n  <div class=\"layui-form-item\" pane=\"\">\n    <label class=\"layui-form-label\">原始复选框</label>\n    <div class=\"layui-input-block\">\n      <input type=\"checkbox\" name=\"like1[write]\" lay-skin=\"primary\" title=\"写作\" checked=\"\">\n      <input type=\"checkbox\" name=\"like1[read]\" lay-skin=\"primary\" title=\"阅读\">\n      <input type=\"checkbox\" name=\"like1[game]\" lay-skin=\"primary\" title=\"游戏\" disabled=\"\">\n    </div>\n  </div>\n  \n  <div class=\"layui-form-item\">\n    <label class=\"layui-form-label\">开关-默认关</label>\n    <div class=\"layui-input-block\">\n      <input type=\"checkbox\" name=\"close\" lay-skin=\"switch\" lay-text=\"ON|OFF\">\n    </div>\n  </div>\n  <div class=\"layui-form-item\">\n    <label class=\"layui-form-label\">开关-默认开</label>\n    <div class=\"layui-input-block\">\n      <input type=\"checkbox\" checked=\"\" name=\"open\" lay-skin=\"switch\" lay-filter=\"switchTest\" lay-text=\"ON|OFF\">\n    </div>\n  </div>\n  <div class=\"layui-form-item\">\n    <label class=\"layui-form-label\">单选框</label>\n    <div class=\"layui-input-block\">\n      <input type=\"radio\" name=\"sex\" value=\"男\" title=\"男\" checked=\"\">\n      <input type=\"radio\" name=\"sex\" value=\"女\" title=\"女\">\n      <input type=\"radio\" name=\"sex\" value=\"禁\" title=\"禁用\" disabled=\"\">\n    </div>\n  </div>\n  <div class=\"layui-form-item layui-form-text\">\n    <label class=\"layui-form-label\">普通文本域</label>\n    <div class=\"layui-input-block\">\n      <textarea placeholder=\"请输入内容\" class=\"layui-textarea\"></textarea>\n    </div>\n  </div>\n  <!--<div class=\"layui-form-item layui-form-text\">\n    <label class=\"layui-form-label\">编辑器</label>\n    <div class=\"layui-input-block\">\n      <textarea class=\"layui-textarea layui-hide\" name=\"content\" lay-verify=\"content\" id=\"LAY_demo_editor\"></textarea>\n    </div>\n  </div>-->\n  <div class=\"layui-form-item\">\n    <div class=\"layui-input-block\">\n      <button type=\"submit\" class=\"layui-btn\" lay-submit=\"\" lay-filter=\"demo1\">立即提交</button>\n      <button type=\"reset\" class=\"layui-btn layui-btn-primary\">重置</button>\n    </div>\n  </div>\n</form>",
+        "description": "layui 表单",
+        "prefix": "lay-form"
+    },
+    "layui 导航":{
+        "body":"<ul class=\"layui-nav\">\n  <li class=\"layui-nav-item\"><a href=\"\">最新活动</a></li>\n  <li class=\"layui-nav-item layui-this\">\n    <a href=\"javascript:;\">产品</a>\n    <dl class=\"layui-nav-child\">\n      <dd><a href=\"\">选项1</a></dd>\n      <dd><a href=\"\">选项2</a></dd>\n      <dd><a href=\"\">选项3</a></dd>\n    </dl>\n  </li>\n  <li class=\"layui-nav-item\"><a href=\"\">大数据</a></li>\n  <li class=\"layui-nav-item\">\n    <a href=\"javascript:;\">解决方案</a>\n    <dl class=\"layui-nav-child\">\n      <dd><a href=\"\">移动模块</a></dd>\n      <dd><a href=\"\">后台模版</a></dd>\n      <dd class=\"layui-this\"><a href=\"\">选中项</a></dd>\n      <dd><a href=\"\">电商平台</a></dd>\n    </dl>\n  </li>\n  <li class=\"layui-nav-item\"><a href=\"\">社区</a></li>\n</ul>";,
+        "description": "layui 导航",
+        "prefix": "lay-nav"
+    },
+    "layui 带徽章导航":{
+        "body":"<ul class=\"layui-nav\">\n  <li class=\"layui-nav-item\">\n    <a href=\"\">控制台<span class=\"layui-badge\">9</span></a>\n  </li>\n  <li class=\"layui-nav-item\">\n    <a href=\"\">个人中心<span class=\"layui-badge-dot\"></span></a>\n  </li>\n  <li class=\"layui-nav-item\" lay-unselect=\"\">\n    <a href=\"javascript:;\"><img src=\"//t.cn/RCzsdCq\" class=\"layui-nav-img\">我</a>\n    <dl class=\"layui-nav-child\">\n      <dd><a href=\"javascript:;\">修改信息</a></dd>\n      <dd><a href=\"javascript:;\">安全管理</a></dd>\n      <dd><a href=\"javascript:;\">退了</a></dd>\n    </dl>\n  </li>\n</ul>",
+        "description": "layui 带徽章导航",
+        "prefix": "lay-nav:icon"
+    },
+    "layui 藏青导航":{
+        "body":"<ul class=\"layui-nav layui-bg-cyan\">\n  <li class=\"layui-nav-item\"><a href=\"\">藏青导航</a></li>\n  <li class=\"layui-nav-item layui-this\"><a href=\"\">产品</a></li>\n  <li class=\"layui-nav-item\"><a href=\"\">大数据</a></li>\n  <li class=\"layui-nav-item\">\n    <a href=\"javascript:;\">解决方案</a>\n    <dl class=\"layui-nav-child\">\n      <dd><a href=\"\">移动模块</a></dd>\n      <dd><a href=\"\">后台模版</a></dd>\n      <dd><a href=\"\">电商平台</a></dd>\n    </dl>\n  </li>\n  <li class=\"layui-nav-item\"><a href=\"\">社区</a></li>\n</ul>",
+        "description": "layui 藏青导航",
+        "prefix": "lay-nav:cyan"
+    },
+    "layui 墨绿导航":{
+        "body":"<ul class=\"layui-nav layui-bg-green\">\n  <li class=\"layui-nav-item\"><a href=\"\">藏青导航</a></li>\n  <li class=\"layui-nav-item layui-this\"><a href=\"\">产品</a></li>\n  <li class=\"layui-nav-item\"><a href=\"\">大数据</a></li>\n  <li class=\"layui-nav-item\">\n    <a href=\"javascript:;\">解决方案</a>\n    <dl class=\"layui-nav-child\">\n      <dd><a href=\"\">移动模块</a></dd>\n      <dd><a href=\"\">后台模版</a></dd>\n      <dd><a href=\"\">电商平台</a></dd>\n    </dl>\n  </li>\n  <li class=\"layui-nav-item\"><a href=\"\">社区</a></li>\n</ul>",
+        "description": "layui 墨绿导航",
+        "prefix": "lay-nav:green"
+    },
+    "layui 垂直导航":{
+        "body":"<ul class=\"layui-nav layui-nav-tree layui-inline\" lay-filter=\"demo\" style=\"margin-right: 10px;\">\n  <li class=\"layui-nav-item layui-nav-itemed\">\n    <a href=\"javascript:;\">默认展开</a>\n    <dl class=\"layui-nav-child\">\n      <dd><a href=\"javascript:;\">选项一</a></dd>\n      <dd><a href=\"javascript:;\">选项二</a></dd>\n      <dd><a href=\"javascript:;\">选项三</a></dd>\n      <dd><a href=\"\">跳转项</a></dd>\n    </dl>\n  </li>\n  <li class=\"layui-nav-item\">\n    <a href=\"javascript:;\">解决方案</a>\n    <dl class=\"layui-nav-child\">\n      <dd><a href=\"\">移动模块</a></dd>\n      <dd><a href=\"\">后台模版</a></dd>\n      <dd><a href=\"\">电商平台</a></dd>\n    </dl>\n  </li>\n  <li class=\"layui-nav-item\"><a href=\"\">云市场</a></li>\n  <li class=\"layui-nav-item\"><a href=\"\">社区</a></li>\n</ul>\n<script>\n layui.use([\"element\",\"layer\"], function(){ \n  var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块 \n var layer = layui.layer;   //监听导航点击 \n  element.on(\"nav(demo)\", function(elem){ \n    //console.log(elem) \n    layer.msg(elem.text()); \n  });\n}); \n</script>",
+        "description": "layui 垂直导航",
+        "prefix": "lay-nav:inline"
+    },
+    "layui 面包屑":{
+        "body":"<span class=\"layui-breadcrumb\" lay-separator=\"|\">\n  <a href=\"\">娱乐</a>\n  <a href=\"\">八卦</a>\n  <a href=\"\">体育</a>\n  <a href=\"\">搞笑</a>\n  <a href=\"\">视频</a>\n  <a href=\"\">游戏</a>\n  <a href=\"\">综艺</a>\n</span>",
+        "description": "layui 面包屑",
+        "prefix": "lay-nav:bread"
+    },
+    "layui 选项卡":{
+        "body":"<div class=\"layui-tab\">\n  <ul class=\"layui-tab-title\">\n    <li class=\"layui-this\">网站设置</li>\n    <li>用户管理</li>\n    <li>权限分配</li>\n    <li>商品管理</li>\n    <li>订单管理</li>\n  </ul>\n  <div class=\"layui-tab-content\">\n    <div class=\"layui-tab-item layui-show\">\n      1. 高度默认自适应，也可以随意固宽。\n      <br>2. Tab进行了响应式处理，所以无需担心数量多少。\n    </div>\n    <div class=\"layui-tab-item\">内容2</div>\n    <div class=\"layui-tab-item\">内容3</div>\n    <div class=\"layui-tab-item\">内容4</div>\n    <div class=\"layui-tab-item\">内容5</div>\n  </div>\n</div>\n<script>\nlayui.use(\"element\", function(){\n  var $ = layui.jquery\n  ,element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块\n  \n  //触发事件\n  var active = {\n    tabAdd: function(){\n      //新增一个Tab项\n      element.tabAdd(\"demo\", {\n        title: \"新选项\"+ (Math.random()*1000|0) //用于演示\n        ,content: \"内容\"+ (Math.random()*1000|0)\n        ,id: new Date().getTime() //实际使用一般是规定好的id，这里以时间戳模拟下\n      })\n    }\n    ,tabDelete: function(othis){\n      //删除指定Tab项\n      element.tabDelete(\"demo\", \"44\"); //删除：“商品管理”\n      \n      \n      othis.addClass(\"layui-btn-disabled\");\n    }\n    ,tabChange: function(){\n      //切换到指定Tab项\n      element.tabChange(\"demo\", \"22\"); //切换到：用户管理\n    }\n  };\n  \n  $(\".site-demo-active\").on(\"click\", function(){\n    var othis = $(this), type = othis.data(\"type\");\n    active[type] ? active[type].call(this, othis) : \"\";\n  });\n  \n  //Hash地址的定位\n  var layid = location.hash.replace(/^#test=/, \"\");\n  element.tabChange(\"test\", layid);\n  \n  element.on(\"tab(test)\", function(elem){\n    location.hash = \"test=\"+ $(this).attr(\"lay-id\");\n  });\n  \n});\n</script>",
+        "description": "layui 选项卡",
+        "prefix": "lay-tab"
     }
 }

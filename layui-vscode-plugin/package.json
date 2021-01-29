@@ -4,7 +4,7 @@
 	"description": "开发中常用的 layui 框架自动补全",
 	"keywords": ["vscode", "plugin", "layui","pfinal"],
 	"publisher": "PFinal-nc",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.52.0"
 	},
