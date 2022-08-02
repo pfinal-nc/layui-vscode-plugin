@@ -1,8 +1,8 @@
 {
-    "layui CDN": {
-        "body": "<link rel=\"stylesheet\" media=\"screen\" href=\"https://www.layuicdn.com/layui-v2.5.6/css/layui.css\">\n<script src=\"https://www.layuicdn.com/layui-v2.5.6/layui.js\"></script>",
+    "layui CDN:2.7": {
+        "body": "<link rel=\"stylesheet\" media=\"screen\" href=\"https://cdnjs.cloudflare.com/ajax/libs/layui/2.7.5/layui.min.js\">\n<script src=\"https://cdnjs.cloudflare.com/ajax/libs/layui/2.7.5/layui.js\"></script>",
         "description": "layui CDN",
-        "prefix": "lay-cdn"
+        "prefix": "lay-cdn:2.7.6"
     },
     "layui container 容器": {
         "body": "<div class=\"layui-container\">\n</div>",
@@ -79,10 +79,30 @@
         "description": "layui 按钮组",
         "prefix": "lay-btn:group"
     },
+    "layui 按钮组带图标": {
+        "body": "<div class=\"layui-btn-group\">\n  <button type=\"button\" class=\"layui-btn layui-btn-primary\"><i class=\"layui-icon\">&#xe608;</i>增加</button>\n<button type=\"button\" class=\"layui-btn layui-btn-primary\"><i class=\"layui-icon\">&#xe642;</i>编辑</button>\n<button type=\"button\" class=\"layui-btn layui-btn-primary\"><i class=\"layui-icon\">&#xe640;</i>删除</button>\n</div>",
+        "description": "layui 按钮组带图标",
+        "prefix": "lay-btn:group:icon"
+    },
     "layui 表单": {
         "body": "<form class=\"layui-form\" action=\"\">\n  <div class=\"layui-form-item\">\n    <label class=\"layui-form-label\">单行输入框</label>\n    <div class=\"layui-input-block\">\n      <input type=\"text\" name=\"title\" lay-verify=\"title\" autocomplete=\"off\" placeholder=\"请输入标题\" class=\"layui-input\">\n    </div>\n  </div>\n  <div class=\"layui-form-item\">\n    <label class=\"layui-form-label\">验证必填项</label>\n    <div class=\"layui-input-block\">\n      <input type=\"text\" name=\"username\" lay-verify=\"required\" lay-reqtext=\"用户名是必填项，岂能为空？\" placeholder=\"请输入\" autocomplete=\"off\" class=\"layui-input\">\n    </div>\n  </div>\n  \n  <div class=\"layui-form-item\">\n    <div class=\"layui-inline\">\n      <label class=\"layui-form-label\">验证手机</label>\n      <div class=\"layui-input-inline\">\n        <input type=\"tel\" name=\"phone\" lay-verify=\"required|phone\" autocomplete=\"off\" class=\"layui-input\">\n      </div>\n    </div>\n    <div class=\"layui-inline\">\n      <label class=\"layui-form-label\">验证邮箱</label>\n      <div class=\"layui-input-inline\">\n        <input type=\"text\" name=\"email\" lay-verify=\"email\" autocomplete=\"off\" class=\"layui-input\">\n      </div>\n    </div>\n  </div>\n  \n  <div class=\"layui-form-item\">\n    <div class=\"layui-inline\">\n      <label class=\"layui-form-label\">多规则验证</label>\n      <div class\"layui-input-inline\">\n        <input type=\"text\" name=\"number\" lay-verify=\"required|number\" autocomplete=\"off\" class=\"layui-input\">\n      </div>\n    </div>\n    <div class=\"layui-inline\">\n      <label class=\"layui-form-label\">验证日期</label>\n      <div class=\"layui-input-inline\">\n        <input type=\"text\" name=\"date\" id=\"date\" lay-verify=\"date\" placeholder=\"yyyy-MM-dd\" autocomplete=\"off\" class=\"layui-input\">\n      </div>\n    </div>\n    <div class=\"layui-inline\">\n      <label class=\"layui-form-label\">验证链接</label>\n      <div class=\"layui-input-inline\">\n        <input type=\"tel\" name=\"url\" lay-verify=\"url\" autocomplete=\"off\" class=\"layui-input\">\n      </div>\n    </div>\n  </div>\n  \n  <div class=\"layui-form-item\">\n    <label class=\"layui-form-label\">验证身份证</label>\n    <div class=\"layui-input-block\">\n      <input type=\"text\" name=\"identity\" lay-verify=\"identity\" placeholder=\"\" autocomplete=\"off\" class=\"layui-input\">\n    </div>\n  </div>\n  <div class=\"layui-form-item\">\n    <label class=\"layui-form-label\">自定义验证</label>\n    <div class=\"layui-input-inline\">\n      <input type=\"password\" name=\"password\" lay-verify=\"pass\" placeholder=\"请输入密码\" autocomplete=\"of\" class=\"layui-input\">\n    </div>\n    <div class=\"layui-form-mid layui-word-aux\">请填写6到12位密码</div>\n  </div>\n  \n  <div class=\"layui-form-item\">\n    <div class=\"layui-inline\">\n      <label class=\"layui-form-label\">范围</label>\n      <div class=\"layui-input-inline\" style=\"width: 100px;\">\n        <input type=\"text\" name=\"price_min\" placeholder=\"￥\" autocomplete=\"off\" class=\"layui-input\">\n      </div>\n      <div class=\"layui-form-mid\">-</div>\n      <div class=\"layui-input-inline\" style=\"width: 100px;\">\n        <input type=\"text\" name=\"price_max\" placeholder=\"￥\" autocomplete=\"off\" class=\"layui-input\">\n      </div>\n    </div>\n  </div>\n  \n  <div class=\"layui-form-item\">\n    <label class=\"layui-form-label\">单行选择框</label>\n    <div class=\"layui-input-block\">\n      <select name=\"interest\" lay-filter=\"aihao\">\n        <option value=\"\"></option>\n        <option value=\"0\">写作</option>\n        <option value=\"1\" selected=\"\">阅读</option>\n        <option value=\"2\">游戏</option>\n        <option value=\"3\">音乐</option>\n        <option value=\"4\">旅行</option>\n      </select>\n    </div>\n  </div>\n  \n  \n  <div class=\"layui-form-item\">\n    <div class=\"layui-inline\">\n      <label class=\"layui-form-label\">分组选择框</label>\n      <div class=\"layui-input-inline\">\n        <select name=\"quiz\">\n          <option value=\"\">请选择问题</option>\n          <optgroup label=\"城市记忆\">\n            <option value=\"你工作的第一个城市\">你工作的第一个城市</option>\n          </optgroup>\n          <optgroup label=\"学生时代\">\n            <option value=\"你的工号\">你的工号</option>\n            <option value=\"你最喜欢的老师\">你最喜欢的老师</option>\n          </optgroup>\n        </select>\n      </div>\n    </div>\n    <div class=\"layui-inline\">\n      <label class=\"layui-form-label\">搜索选择框</label>\n      <div class=\"layui-input-inline\">\n        <select name=\"modules\" lay-verify=\"required\" lay-search=\"\">\n          <option value=\"\">直接选择或搜索选择</option>\n          <option value=\"1\">layer</option>\n          <option value=\"2\">form</option>\n          <option value=\"3\">layim</option>\n          <option value=\"4\">element</option>\n          <option value=\"5\">laytpl</option>\n          <option value=\"6\">upload</option>\n          <option value=\"7\">laydate</option>\n          <option value=\"8\">laypage</option>\n          <option value=\"9\">flow</option>\n          <option value=\"10\">util</option>\n          <option value=\"11\">code</option>\n          <option value=\"12\">tree</option>\n          <option value=\"13\">layedit</option>\n          <option value=\"14\">nav</option>\n          <option value=\"15\">tab</option>\n          <option value=\"16\">table</option>\n          <option value=\"17\">select</option>\n          <option value=\"18\">checkbox</option>\n          <option value=\"19\">switch</option>\n          <option value=\"20\">radio</option>\n        </select>\n      </div>\n    </div>\n  </div>\n  \n  <div class=\"layui-form-item\">\n    <label class=\"layui-form-label\">联动选择框</label>\n    <div class=\"layui-input-inline\">\n      <select name=\"quiz1\">\n        <option value=\"\">请选择省</option>\n        <option value=\"浙江\" selected=\"\">浙江省</option>\n        <option value=\"你的工号\">江西省</option>\n        <option value=\"你最喜欢的老师\">福建省</option>\n      </select>\n    </div>\n    <div class=\"layui-input-inline\">\n      <select name=\"quiz2\">\n        <option value=\"\">请选择市</option>\n        <option value=\"杭州\">杭州</option>\n        <option value=\"宁波\" disabled=\"\">宁波</option>\n        <option value=\"温州\">温州</option>\n        <option value=\"温州\">台州</option>\n        <option value=\"温州\">绍兴</option>\n      </select>\n    </div>\n    <div class=\"layui-input-inline\">\n      <select name=\"quiz3\">\n        <option value=\"\">请选择县/区</option>\n        <option value=\"西湖区\">西湖区</option>\n        <option value=\"余杭区\">余杭区</option>\n        <option value=\"拱墅区\">临安市</option>\n      </select>\n    </div>\n    <div class=\"layui-form-mid layui-word-aux\">此处只是演示联动排版，并未做联动交互</div>\n  </div>\n  \n  <div class=\"layui-form-item\">\n    <label class=\"layui-form-label\">复选框</label>\n    <div class=\"layui-input-block\">\n      <input type=\"checkbox\" name=\"like[write]\" title=\"写作\">\n      <input type=\"checkbox\" name=\"like[read]\" title=\"阅读\" checked=\"\">\n      <input type=\"checkbox\" name=\"like[game]\" title=\"游戏\">\n    </div>\n  </div>\n  \n  <div class=\"layui-form-item\" pane=\"\">\n    <label class=\"layui-form-label\">原始复选框</label>\n    <div class=\"layui-input-block\">\n      <input type=\"checkbox\" name=\"like1[write]\" lay-skin=\"primary\" title=\"写作\" checked=\"\">\n      <input type=\"checkbox\" name=\"like1[read]\" lay-skin=\"primary\" title=\"阅读\">\n      <input type=\"checkbox\" name=\"like1[game]\" lay-skin=\"primary\" title=\"游戏\" disabled=\"\">\n    </div>\n  </div>\n  \n  <div class=\"layui-form-item\">\n    <label class=\"layui-form-label\">开关-默认关</label>\n    <div class=\"layui-input-block\">\n      <input type=\"checkbox\" name=\"close\" lay-skin=\"switch\" lay-text=\"ON|OFF\">\n    </div>\n  </div>\n  <div class=\"layui-form-item\">\n    <label class=\"layui-form-label\">开关-默认开</label>\n    <div class=\"layui-input-block\">\n      <input type=\"checkbox\" checked=\"\" name=\"open\" lay-skin=\"switch\" lay-filter=\"switchTest\" lay-text=\"ON|OFF\">\n    </div>\n  </div>\n  <div class=\"layui-form-item\">\n    <label class=\"layui-form-label\">单选框</label>\n    <div class=\"layui-input-block\">\n      <input type=\"radio\" name=\"sex\" value=\"男\" title=\"男\" checked=\"\">\n      <input type=\"radio\" name=\"sex\" value=\"女\" title=\"女\">\n      <input type=\"radio\" name=\"sex\" value=\"禁\" title=\"禁用\" disabled=\"\">\n    </div>\n  </div>\n  <div class=\"layui-form-item layui-form-text\">\n    <label class=\"layui-form-label\">普通文本域</label>\n    <div class=\"layui-input-block\">\n      <textarea placeholder=\"请输入内容\" class=\"layui-textarea\"></textarea>\n    </div>\n  </div>\n  <!--<div class=\"layui-form-item layui-form-text\">\n    <label class=\"layui-form-label\">编辑器</label>\n    <div class=\"layui-input-block\">\n      <textarea class=\"layui-textarea layui-hide\" name=\"content\" lay-verify=\"content\" id=\"LAY_demo_editor\"></textarea>\n    </div>\n  </div>-->\n  <div class=\"layui-form-item\">\n    <div class=\"layui-input-block\">\n      <button type=\"submit\" class=\"layui-btn\" lay-submit=\"\" lay-filter=\"demo1\">立即提交</button>\n      <button type=\"reset\" class=\"layui-btn layui-btn-primary\">重置</button>\n    </div>\n  </div>\n</form>",
         "description": "layui 表单",
         "prefix": "lay-form"
+    },
+    "layui 下拉": {
+        "body":"<select name=\"city\" lay-verify=\"\">\n  <option value=\"1\">1</option>\n  <option value=\"2\">2</option>\n  <option value=\"3\">3</option>\n</select>",
+        "description": "layui 表单项",
+        "prefix": "lay-select:default"
+    },
+    "layui 下拉-分组": {
+        "body":"<select name=\"city\" lay-verify=\"\">\n  <option value=\"\">请选择</option>\n  <optgroup label=\"城市记忆\">\n  <option value=\"你工作的第一个城市\">你工作的第一个城市？</option>\n  </optgroup>\n  <optgroup label=\"学生时代\">\n  <option value=\"2\">你的工号？</option>\n  <option value=\"3\">你最喜欢的老师？</option>\n  </optgroup>\n  </select>",
+        "description": "layui 表单项",
+        "prefix": "lay-select:optgroup"
+    },
+    "layui 下拉-搜索":{
+        "body":"<select name=\"city\" lay-verify=\"\" lay-serarch=\"\"><option value=\"\">请选择</option><optgroup label=\"城市记忆\"><option value=\"你工作的第一个城市\">你工作的第一个城市？</option></optgroup><optgroup label=\"学生时代\"><option value=\"2\">你的工号？</option><option value=\"3\">你最喜欢的老师？</option></optgroup></select>",
+        "description": "layui 表单项",
+        "prefix": "lay-select:search"
     },
     "layui 导航":{
         "body":"<ul class=\"layui-nav\">\n  <li class=\"layui-nav-item\"><a href=\"\">最新活动</a></li>\n  <li class=\"layui-nav-item layui-this\">\n    <a href=\"javascript:;\">产品</a>\n    <dl class=\"layui-nav-child\">\n      <dd><a href=\"\">选项1</a></dd>\n      <dd><a href=\"\">选项2</a></dd>\n      <dd><a href=\"\">选项3</a></dd>\n    </dl>\n  </li>\n  <li class=\"layui-nav-item\"><a href=\"\">大数据</a></li>\n  <li class=\"layui-nav-item\">\n    <a href=\"javascript:;\">解决方案</a>\n    <dl class=\"layui-nav-child\">\n      <dd><a href=\"\">移动模块</a></dd>\n      <dd><a href=\"\">后台模版</a></dd>\n      <dd class=\"layui-this\"><a href=\"\">选中项</a></dd>\n      <dd><a href=\"\">电商平台</a></dd>\n    </dl>\n  </li>\n  <li class=\"layui-nav-item\"><a href=\"\">社区</a></li>\n</ul>";,
@@ -118,5 +138,155 @@
         "body":"<div class=\"layui-tab\">\n  <ul class=\"layui-tab-title\">\n    <li class=\"layui-this\">网站设置</li>\n    <li>用户管理</li>\n    <li>权限分配</li>\n    <li>商品管理</li>\n    <li>订单管理</li>\n  </ul>\n  <div class=\"layui-tab-content\">\n    <div class=\"layui-tab-item layui-show\">\n      1. 高度默认自适应，也可以随意固宽。\n      <br>2. Tab进行了响应式处理，所以无需担心数量多少。\n    </div>\n    <div class=\"layui-tab-item\">内容2</div>\n    <div class=\"layui-tab-item\">内容3</div>\n    <div class=\"layui-tab-item\">内容4</div>\n    <div class=\"layui-tab-item\">内容5</div>\n  </div>\n</div>\n<script>\nlayui.use(\"element\", function(){\n  var $ = layui.jquery\n  ,element = layui.element; //Tab的切换功能，切换事件监听等，需要依赖element模块\n  \n  //触发事件\n  var active = {\n    tabAdd: function(){\n      //新增一个Tab项\n      element.tabAdd(\"demo\", {\n        title: \"新选项\"+ (Math.random()*1000|0) //用于演示\n        ,content: \"内容\"+ (Math.random()*1000|0)\n        ,id: new Date().getTime() //实际使用一般是规定好的id，这里以时间戳模拟下\n      })\n    }\n    ,tabDelete: function(othis){\n      //删除指定Tab项\n      element.tabDelete(\"demo\", \"44\"); //删除：“商品管理”\n      \n      \n      othis.addClass(\"layui-btn-disabled\");\n    }\n    ,tabChange: function(){\n      //切换到指定Tab项\n      element.tabChange(\"demo\", \"22\"); //切换到：用户管理\n    }\n  };\n  \n  $(\".site-demo-active\").on(\"click\", function(){\n    var othis = $(this), type = othis.data(\"type\");\n    active[type] ? active[type].call(this, othis) : \"\";\n  });\n  \n  //Hash地址的定位\n  var layid = location.hash.replace(/^#test=/, \"\");\n  element.tabChange(\"test\", layid);\n  \n  element.on(\"tab(test)\", function(elem){\n    location.hash = \"test=\"+ $(this).attr(\"lay-id\");\n  });\n  \n});\n</script>",
         "description": "layui 选项卡",
         "prefix": "lay-tab"
+    },
+    "layui Use From": {
+        "body":"layui.use(['form'],function() {\n var form = layui.form;\n  //监听提交\n  form.on('submit(formDemo)', function(data) {\n    layer.msg(JSON.stringify(data.field));\n    return false;\n  });\n});"
+        ,"description": "layui form",
+        "prefix": "lay-use-form"
+    },
+    "layui 顶部往下滑入": {
+        "body":"class=\"layui-anim layui-anim-down\""
+        ,"description": "layui 动画-顶部往下滑入",
+        "prefix": "lay-anim-down"
+    },
+    "layui 微微往下滑入": {
+        "body":"class=\"layui-anim layui-anim-downbit\""
+        ,"description": "layui 动画-微微往下滑入",
+        "prefix": "lay-anim-downit"
+    },
+    "layui 顶部往上滑入": {
+        "body":"class=\"layui-anim layui-anim-up\""
+        ,"description": "layui 动画-顶部往下滑入",
+        "prefix": "lay-anim-up"
+    },
+    "layui 微微往上滑入": {
+        "body":"class=\"layui-anim layui-anim-upbit\""
+        ,"description": "layui 动画-微微往下滑入",
+        "prefix": "lay-anim-upit"
+    },
+    "layui 平滑放大": {
+        "body":"class=\"layui-anim layui-anim-scale\""
+        ,"description": "layui 动画-往左滑入",
+        "prefix": "lay-anim-scale"
+    },
+    "layui 弹簧式放大": {
+        "body":"class=\"layui-anim layui-anim-scaleSpring\""
+        ,"description": "layui 动画-弹簧式放大",
+        "prefix": "lay-anim-scaleSpring"
+    },
+    "layui 平滑放小": {
+        "body":"class=\"layui-anim layui-anim-scalesmall\""
+        ,"description": "layui 动画-平滑放小",
+        "prefix": "lay-anim-scalesmall"
+    },
+    "layui 渐现": {
+        "body":"class=\"layui-anim layui-anim-fadein\""
+        ,"description": "layui 动画-渐现",
+        "prefix": "lay-anim-fadein"
+    },
+    "layui 渐隐": {
+        "body":"class=\"layui-anim layui-anim-fadeout\""
+        ,"description": "layui 动画-渐隐",
+        "prefix": "lay-anim-fadeout"
+    },
+    "layui 360度旋转": {
+        "body":"class=\"layui-anim layui-anim-rotate\""
+        ,"description": "layui 动画-360度旋转",
+        "prefix": "lay-anim-rotate"
+    },
+    "layui 进度条HTML": {
+        "body":"<div class=\"layui-progress\"><div class=\"layui-progress-bar\" lay-percent=\"10%\"></div></div>"
+        ,"description": "layui 进度条",
+        "prefix": "lay-progress:html"
+    },
+    "layui 进度条JS": {
+        "body":"layui.use(['element'] ,function(){\n  var element = layui.element;\n  element.progress('demo', '50%');\n});"
+        ,"description": "layui 进度条-线条",
+        "prefix": "lay-progress:js"
+    },
+    "layui 时间线":{
+        "body":"<ul class=\"layui-timeline\">\n<li class=\"layui-timeline-item\">\n  <i class=\"layui-icon layui-timeline-axis\">&#xe63f;</i>\n  <div class=\"layui-timeline-content layui-text\">\n    <h3 class=\"layui-timeline-title\">8月18日</h3>\n    <p>\n      layui 2.0 的一切准备工作似乎都已到位。发布之弦，一触即发。\n      <br>不枉近百个日日夜夜与之为伴。因小而大，因弱而强。\n      <br>无论它能走多远，抑或如何支撑？至少我曾倾注全心，无怨无悔 <i class=\"layui-icon\"></i>\n    </p>\n  </div>\n</li>\n<li class=\"layui-timeline-item\">\n  <i class=\"layui-icon layui-timeline-axis\">&#xe63f;</i>\n  <div class=\"layui-timeline-content layui-text\">\n    <h3 class=\"layui-timeline-title\">8月16日</h3>\n    <p>杜甫的思想核心是儒家的仁政思想，他有“<em>致君尧舜上，再使风俗淳</em>”的宏伟抱负。个人最爱的名篇有：</p>\n    <ul>\n      <li>《登高》</li>\n      <li>《茅屋为秋风所破歌》</li>\n    </ul>\n  </div>\n</li>\n<li class=\"layui-timeline-item\">\n  <i class=\"layui-icon layui-timeline-axis\">&#xe63f;</i>\n  <div class=\"layui-timeline-content layui-text\">\n    <h3 class=\"layui-timeline-title\">8月15日</h3>\n    <p>\n      中国人民抗日战争胜利72周年\n      <br>常常在想，尽管对这个国家有这样那样的抱怨，但我们的确生在了最好的时代\n      <br>铭记、感恩\n      <br>所有为中华民族浴血奋战的英雄将士\n      <br>永垂不朽\n    </p>\n  </div>\n</li>\n<li class=\"layui-timeline-item\">\n  <i class=\"layui-icon layui-timeline-axis\">&#xe63f;</i>\n  <div class=\"layui-timeline-content layui-text\">\n    <div class=\"layui-timeline-title\">过去</div>\n  </div>\n</li>\n  </ul>",
+        "description": "layui 时间线",
+        "prefix": "lay-timeline"
+    },
+    "layui 分割线":{
+        "body":"<hr class=\"layui-bg-red\">"
+        ,"description": "layui 分割线",
+        "prefix": "lay-hr:red"
+    },
+    "layui 分割线-绿色":{
+        "body":"<hr class=\"layui-bg-green\">"
+        ,"description": "layui 分割线-绿色",
+        "prefix": "lay-hr:green"
+    },
+    "layui 分割线-蓝色":{
+        "body":"<hr class=\"layui-bg-blue\">"
+        ,"description": "layui 分割线-蓝色",
+        "prefix": "lay-hr:blue"
+    },
+    "layui 分割线-橙色":{
+        "body":"<hr class=\"layui-bg-orange\">"
+        ,"description": "layui 分割线-橙色",
+        "prefix": "lay-hr:orange"
+    },
+    "layui 弹出层":{
+        "body":"layui.use(['layer'], function(){\n var layer = layui.layer;\n  lay.msg('Hello World');\n});"
+        ,"description": "layui 弹出层",
+        "prefix": "lay-layer:default"
+    },
+    "layui 弹出层-带标题":{
+        "body":"layui.use(['layer'], function(){\n var layer = layui.layer;\n  lay.msg('Hello World', {title: '标题'});\n});"
+        ,"description": "layui 弹出层-带标题",
+        "prefix": "lay-layer:title"
+    },
+    "layui 弹出层-带图标":{
+        "body":"layui.use(['layer'], function(){\n var layer = layui.layer;\n  lay.msg('Hello World', {icon: 1});\n});"
+        ,"description": "layui 弹出层-带图标",
+        "prefix": "lay-layer:icon"
+    },
+    "layui 弹出层-带标题和图标":{
+        "body":"layui.use(['layer'], function(){\n var layer = layui.layer;\n  lay.msg('Hello World', {icon: 1, title: '标题'});\n});"
+        ,"description": "layui 弹出层-带标题和图标",
+        "prefix": "lay-layer:title-icon"
+    },
+    "layui 弹出层-带标题和图标-红色":{
+        "body":"layui.use(['layer'], function(){\n var layer = layui.layer;\n  lay.msg('Hello World', {icon: 1, title: '标题', bgcolor: 'red'});\n});"
+        ,"description": "layui 弹出层-带标题和图标-红色",
+        "prefix": "lay-layer:title-icon-red"
+    },
+    "layui 弹出层-询问":{
+        "body":"layui.use(['layer'], function(){\n var layer = layui.layer;\n  lay.confirm('Hello World', function(index){\n    lay.msg('点击了确定');\n  });\n});"
+        ,"description": "layui 弹出层-询问",
+        "prefix": "lay-confirm:default"
+    },
+    "layui 弹出层-询问-带标题":{
+        "body":"layui.use(['layer'], function(){\n var layer = layui.layer;\n  lay.confirm('Hello World', function(index){\n    lay.msg('点击了确定');\n  }, '标题');\n});"
+        ,"description": "layui 弹出层-询问-带标题",
+        "prefix": "lay-confirm:title"
+    },
+    "layui 弹出层-询问-多按钮":{
+        "body":"layui.use(['layer'], function(){\n var layer = layui.layer;\n  lay.confirm('Hello World', function(index){\n    lay.msg('点击了确定');\n  }, '标题', ['确定', '取消']);\n});"
+        ,"description": "layui 弹出层-询问-多按钮",
+        "prefix": "lay-confirm:title-btns"
+    },
+    "layui 分页":{
+        "body":"layui.use('laypage', function(){\nvar laypage = layui.laypage;\n\n//执行一个laypage实例\nlaypage.render({\n  elem: 'test1' //注意，这里的 test1 是 ID，不用加 # 号\n  ,count: 50 //数据总数，从服务端得到\n});\n  });",
+        "description": "layui 分页",
+        "prefix": "lay-page"
+    },
+    "layui 数据表格":{
+        "body":"<table id=\"demo\" lay-filter=\"test\"></table>\n<script>\nlayui.use('table', function(){\n  var table = layui.table;\n  \n  //第一个实例\n  table.render({\n    elem: '#demo'\n    ,height: 312\n    ,url: '/static/json/table/user.json'\n    ,page: true\n    ,cols: [[ \n      {field: 'id', title: 'ID', width:80, sort: true, fixed: 'left'}\n      ,{field: 'username', title: '用户名', width:80}\n      ,{field: 'sex', title: '性别', width:80, sort: true}\n      ,{field: 'city', title: '城市', width:80} \n      ,{field: 'sign', title: '签名', width: 177}\n      ,{field: 'experience', title: '积分', width: 80, sort: true}\n      ,{field: 'score', title: '评分', width: 80, sort: true}\n      ,{field: 'classify', title: '职业', width: 80}\n      ,{field: 'words', title: '字数', width: 135, sort: true}\n    ]]\n  });\n  \n});\n</script>"
+        ,"description": "layui 数据表格",
+        "prefix": "lay-table"
+    },
+    "layui 倒计时":{
+        "body":"<div id=\"test\"></div>\n \n<script>\nlayui.use('util', function(){\n  var util = layui.util;\n  var endTime = new Date(2099,1,1).getTime() \n  ,serverTime = new Date().getTime(); \n   \n  util.countdown(endTime, serverTime, function(date, serverTime, timer){\n    var str = date[0] + '天' + date[1] + '时' +  date[2] + '分' + date[3] + '秒';\n    layui.$('#test').html('距离2099年1月1日还有：'+ str);\n  });\n});\n</script>",
+        "description": "layui 倒计时",
+        "prefix": "lay-util"
+    },
+    "layui 评分":{
+        "body":"<div id=\"test\"></div>\n \n<script>\nlayui.use('rate', function(){\n  var rate = layui.rate;\n  \n  //渲染\n  rate.render({\n    elem: '#test'\n    ,value: 3.5\n    ,text: true\n  });\n});\n</script>",
+        "description": "layui 评分",
+        "prefix": "lay-rate"
     }
 }
