@@ -1,5 +1,21 @@
 # Change Log
 
+####  Vsersion - 0.0.6
+- lay-cdn 更新 2.8 版本的cdn
+- lay-btn-c 更新按钮组
+- lay-login-form 登录面板
+- lay-reg-form 注册面板
+- lay-table  表格更新
+- lay-input 输入框
+- lay-input-n 数字输入框
+- lay-input-p 密码输入框
+- lay-input-c 输入框内容清空
+- lay-blockquote 引用
+- lay-fieldset 字段集
+- lay-fixbar 固定条
+- lay-tree 树组件
+
+
 ####  Vsersion - 0.0.5
 - lay-cdn 更新 2.7 版本的cdn
 - lay-btn 增加 按钮组带图标

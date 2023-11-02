@@ -2,9 +2,9 @@
 	"name": "layui-snippets-pfinal",
 	"displayName": "layui-vscode-plugin",
 	"description": "开发中常用的 layui 框架自动补全",
-	"keywords": ["vscode", "plugin", "layui","pfinal"],
+	"keywords": ["vscode", "plugin", "layui","pfinal","pfinalclub"],
 	"publisher": "PFinal-nc",
-	"version": "0.0.5",
+	"version": "0.0.6",
 	"engines": {
 		"vscode": "^1.52.0"
 	},
