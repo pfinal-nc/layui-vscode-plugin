@@ -1,7 +1,12 @@
 {   
+    "layui CDN:2.11": {
+        "body": "<link rel=\"stylesheet\" media=\"screen\" href=\"https://cdn.staticfile.org/layui/2.11.6/css/layui.min.css\">\n<script src=\"https://cdn.staticfile.org/layui/2.11.6/layui.min.js\"></script>",
+        "description": "layui CDN 2.11.6",
+        "prefix": "lay-cdn:2.11.6"
+    },
     "layui CDN:2.8": {
         "body": "<link rel=\"stylesheet\" media=\"screen\" href=\"https://cdn.staticfile.org/layui/2.8.18/css/layui.min.css\">\n<script src=\"https://cdn.staticfile.org/layui/2.8.18/layui.min.js\"></script>",
-        "description": "layui CDN",
+        "description": "layui CDN 2.8.18",
         "prefix": "lay-cdn:2.8.18"
     },
     "layui container 容器": {
@@ -343,5 +348,65 @@
         "body":"<div id=\"ID-tree-demo-onlyIconControl\"></div>\n<script>\nlayui.use(function(){\n  var tree = layui.tree;\n  var layer = layui.layer;\n  // 模拟数据\n  var data = [{title:'江西',id:1,children:[{title:'南昌',id:1000,children:[{title:'青山湖区',id:10001},{title:'高新区',id:10002}]},{title:'九江',id:1001},{title:'赣州',id:1002}]},{title:'广西',id:2,children:[{title:'南宁',id:2000},{title:'桂林',id:2001}]},{title:'陕西',id:3,children:[{title:'西安',id:3000},{title:'延安',id:3001}]},{title:'山西',id:3,children:[{title:'太原',id:4000},{title:'长治',id:4001}]}];\n  // 渲染\n  tree.render({\n    elem: '#ID-tree-demo-onlyIconControl',\n    data: data,\n    onlyIconControl: true,  // 是否仅允许节点左侧图标控制展开收缩\n    click: function(obj){\n      layer.msg(JSON.stringify(obj.data));\n    }\n  });\n  \n});\n</script>",
         "description": "layui 树组件",
         "prefix": "lay-tree"
+    },
+    "layui 新标签页组件": {
+        "body": "<div id=\"test-tabs\"></div>\n<script>\nlayui.use('tabs', function(){\n  var tabs = layui.tabs;\n  \n  // 方法渲染\n  tabs.render({\n    elem: '#test-tabs',\n    header: [\n      { title: 'Tab1' },\n      { title: 'Tab2' },\n      { title: 'Tab3' }\n    ],\n    body: [\n      { content: 'Tab content 1' },\n      { content: 'Tab content 2' },\n      { content: 'Tab content 3' }\n    ],\n    index: 0,\n    closable: true\n  });\n});\n</script>",
+        "description": "layui 新标签页组件 (2.10+)",
+        "prefix": "lay-tabs"
+    },
+    "layui 颜色选择器": {
+        "body": "<div id=\"test-colorpicker\"></div>\n<script>\nlayui.use('colorpicker', function(){\n  var colorpicker = layui.colorpicker;\n  \n  // 渲染\n  colorpicker.render({\n    elem: '#test-colorpicker',\n    color: '#FF5722',\n    done: function(color){\n      console.log('选择的颜色：' + color);\n    }\n  });\n});\n</script>",
+        "description": "layui 颜色选择器",
+        "prefix": "lay-colorpicker"
+    },
+    "layui 穿梭框": {
+        "body": "<div id=\"test-transfer\"></div>\n<script>\nlayui.use('transfer', function(){\n  var transfer = layui.transfer;\n  \n  // 模拟数据\n  var data = [\n    {value: 1, title: '选项1'},\n    {value: 2, title: '选项2'},\n    {value: 3, title: '选项3'},\n    {value: 4, title: '选项4'}\n  ];\n  \n  // 渲染\n  transfer.render({\n    elem: '#test-transfer',\n    data: data,\n    done: function(data, index){\n      console.log(data, index);\n    }\n  });\n});\n</script>",
+        "description": "layui 穿梭框",
+        "prefix": "lay-transfer"
+    },
+    "layui 滑块": {
+        "body": "<div id=\"test-slider\"></div>\n<script>\nlayui.use('slider', function(){\n  var slider = layui.slider;\n  \n  // 渲染\n  slider.render({\n    elem: '#test-slider',\n    min: 0,\n    max: 100,\n    value: 30,\n    done: function(value){\n      console.log('当前值：' + value);\n    }\n  });\n});\n</script>",
+        "description": "layui 滑块",
+        "prefix": "lay-slider"
+    },
+    "layui 轮播": {
+        "body": "<div id=\"test-carousel\"></div>\n<script>\nlayui.use('carousel', function(){\n  var carousel = layui.carousel;\n  \n  // 渲染\n  carousel.render({\n    elem: '#test-carousel',\n    width: '100%',\n    height: '200px',\n    arrow: 'hover',\n    indicator: 'inside',\n    autoplay: true,\n    interval: 3000\n  });\n});\n</script>",
+        "description": "layui 轮播",
+        "prefix": "lay-carousel"
+    },
+    "layui 流加载": {
+        "body": "<div id=\"test-flow\"></div>\n<script>\nlayui.use('flow', function(){\n  var flow = layui.flow;\n  \n  // 流加载\n  flow.load({\n    elem: '#test-flow',\n    done: function(page, next){\n      // 模拟数据\n      var lis = [];\n      for(var i = 0; i < 8; i++){\n        lis.push('<li>第' + (page * 8 + i + 1) + '条数据</li>');\n      }\n      \n      // 模拟异步请求\n      setTimeout(function(){\n        next(lis.join(''), page < 3); // 假设总共有4页数据\n      }, 1000);\n    }\n  });\n});\n</script>",
+        "description": "layui 流加载",
+        "prefix": "lay-flow"
+    },
+    "layui 代码预览": {
+        "body": "<div id=\"test-code\"></div>\n<script>\nlayui.use('code', function(){\n  var code = layui.code;\n  \n  // 渲染\n  code.render({\n    elem: '#test-code',\n    title: '代码示例',\n    about: false,\n    height: '300px'\n  });\n});\n</script>",
+        "description": "layui 代码预览组件",
+        "prefix": "lay-code"
+    },
+    "layui 徽章": {
+        "body": "<span class=\"layui-badge\">9</span>\n<span class=\"layui-badge layui-bg-orange\">新</span>\n<span class=\"layui-badge layui-bg-green\">Hot</span>\n<span class=\"layui-badge-dot\"></span>\n<span class=\"layui-badge-dot layui-bg-orange\"></span>",
+        "description": "layui 徽章",
+        "prefix": "lay-badge"
+    },
+    "layui 下拉菜单": {
+        "body": "<button id=\"test-dropdown\" class=\"layui-btn\">下拉菜单</button>\n<script>\nlayui.use('dropdown', function(){\n  var dropdown = layui.dropdown;\n  \n  // 渲染\n  dropdown.render({\n    elem: '#test-dropdown',\n    data: [{\n      title: '选项1',\n      id: 'option1'\n    }, {\n      title: '选项2',\n      id: 'option2'\n    }, {\n      title: '选项3',\n      id: 'option3'\n    }],\n    click: function(obj){\n      console.log(obj);\n    }\n  });\n});\n</script>",
+        "description": "layui 下拉菜单",
+        "prefix": "lay-dropdown"
+    },
+    "layui 上传": {
+        "body": "<div class=\"layui-upload\">\n  <button type=\"button\" class=\"layui-btn\" id=\"test-upload\">选择文件</button>\n  <div class=\"layui-upload-list\">\n    <table class=\"layui-table\">\n      <thead>\n        <tr><th>文件名</th><th>大小</th><th>状态</th><th>操作</th></tr>\n      </thead>\n      <tbody id=\"demoList\"></tbody>\n    </table>\n  </div>\n</div>\n<script>\nlayui.use('upload', function(){\n  var upload = layui.upload;\n  \n  // 执行实例\n  var uploadInst = upload.render({\n    elem: '#test-upload',\n    url: '/upload/',\n    before: function(obj){\n      obj.preview(function(index, file, result){\n        $('#demoList').append('<tr id=\"upload-'+ index +'\">'+\n          '<td>'+ file.name +'</td>'+\n          '<td>'+ (file.size/1014).toFixed(1) +'kb</td>'+\n          '<td>等待上传</td>'+\n          '<td><button class=\"layui-btn layui-btn-xs demo-reload layui-hide\">重传</button> <button class=\"layui-btn layui-btn-xs layui-btn-danger demo-delete\">删除</button></td>'+\n        '</tr>');\n      });\n    },\n    done: function(res){\n      if(res.code == 0){\n        return layer.msg('上传成功');\n      }\n      this.error();\n    },\n    error: function(){\n      var demoText = $('#demoList');\n      demoText.html('<span style=\"color: #FF5722;\">上传失败</span> <a class=\"layui-btn layui-btn-xs demo-reload\">重试</a>');\n    }\n  });\n});\n</script>",
+        "description": "layui 上传",
+        "prefix": "lay-upload"
+    },
+    "layui 日期选择器": {
+        "body": "<div class=\"layui-inline\">\n  <input type=\"text\" class=\"layui-input\" id=\"test-laydate\" placeholder=\"yyyy-MM-dd\">\n</div>\n<script>\nlayui.use('laydate', function(){\n  var laydate = layui.laydate;\n  \n  // 执行一个laydate实例\n  laydate.render({\n    elem: '#test-laydate',\n    type: 'date',\n    done: function(value, date, endDate){\n      console.log(value, date, endDate);\n    }\n  });\n});\n</script>",
+        "description": "layui 日期选择器",
+        "prefix": "lay-laydate"
+    },
+    "layui 组件构建器": {
+        "body": "layui.define('component', function(exports) {\n  // 创建组件\n  var component = layui.component({\n    name: 'myComponent', // 组件名称\n    config: { // 组件默认配置项\n      // 默认配置\n    },\n    render: function() { // 组件渲染逻辑\n      // 渲染逻辑\n    },\n    events: function() { // 组件事件\n      // 事件处理\n    }\n  });\n  \n  // 输出组件接口\n  exports(component.CONST.MOD_NAME, component);\n});",
+        "description": "layui 组件构建器 (2.10+)",
+        "prefix": "lay-component"
     }
 }
