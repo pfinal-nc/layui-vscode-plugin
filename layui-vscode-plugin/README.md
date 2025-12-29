@@ -1,20 +1,64 @@
 # layui-snippets-pfinal
 
-🎉 **Layui VSCode 插件 - 支持最新 2.11.6 版本**
+🎉 **Layui VSCode 插件 - 支持最新 2.13.2 版本**
 
 为 VSCode 提供 Layui 框架的代码片段自动补全，方便快速开发。
 
 ## ✨ 主要特性
 
-- 🚀 **支持最新版本**: 完全支持 Layui 2.11.6 最新版本
+- 🚀 **支持最新版本**: 完全支持 Layui 2.13.2 最新版本
 - 📦 **丰富组件库**: 包含 50+ 个常用 Layui 组件代码片段
 - 🆕 **新增组件**: 支持 2.10+ 新增的组件构建器、新标签页等
 - 💡 **智能补全**: 输入前缀即可快速生成完整代码
 - 🔧 **多语言支持**: 支持 HTML、PHP、JavaScript 三种语言
 
-## 🆕 新增组件 (v0.1.0)
+## 🆕 最新更新 (v0.3.1)
 
-### 2.10+ 新组件
+### 🔧 CDN 地址修复 (v0.3.1)
+- **CDN 更新**: 将 2.13.2 版本 CDN 更新为官方推荐的 `unpkg.com`
+  - 更稳定的国际 CDN 访问
+  - 与官方文档保持一致
+  - 统一使用 `https://` 协议
+
+---
+
+## 📋 核心功能 (v0.3.0)
+
+### 🔥 核心功能增强
+- **Form 核心方法**: 新增 4 个关键方法代码片段 ⭐⭐⭐
+  - `lay-form:render` - 动态表单渲染（必备）
+  - `lay-form:verify` - 自定义验证规则
+  - `lay-form:val` - 表单赋值/取值
+  - `lay-form:submit` - 提交和事件监听
+  
+- **Layer 完整示例**: 新增 layer.open 完整用法 ⭐⭐⭐
+  - `lay-layer:open` - 包含所有常用参数和回调
+
+### 版本更新
+- **完整覆盖**: 新增基础菜单、树形表格、栅格系统等关键组件
+- **Bug 修复**: 修复 lay-form 和 lay-upload 中的错误
+- **代码优化**: 优化 jQuery 使用，统一使用 layui.$
+- **55+ 组件**: 现在包含超过 55 个 Layui 组件代码片段
+
+### 新增组件 (v0.3.0)
+- **Form 方法** (`lay-form:render`, `lay-form:verify`, `lay-form:val`, `lay-form:submit`) ⭐⭐⭐
+- **Layer 完整** (`lay-layer:open`) - layer.open 完整示例 ⭐⭐⭐
+- **基础菜单** (`lay-menu`) - 垂直导航菜单的替代方案 ⭐
+- **树形表格** (`lay-treetable`) - 树形数据表格组件 (2.8+) ⭐
+- **栅格系统** (`lay-grid` 系列) - 完整的响应式栅格布局 ⭐
+- **图标组件** (`lay-icon` 系列) - Layui 图标使用示例 ⭐
+- **模板引擎** (`lay-laytpl` 系列) - Laytpl 模板引擎使用 ⭐
+
+## 📦 包含的组件 (50+)
+
+### 新增重要组件 (v0.3.0)
+- **基础菜单** (`lay-menu`) - 基于 dropdown 的静态菜单结构
+- **树形表格** (`lay-treetable`) - 支持树形数据的表格组件
+- **栅格布局** (`lay-grid`, `lay-grid:responsive`, `lay-grid:offset`, `lay-grid:space`)
+- **图标** (`lay-icon`, `lay-icon:list`) - Layui 图标使用
+- **模板引擎** (`lay-laytpl`, `lay-laytpl:if`, `lay-laytpl:each`) - Laytpl 模板
+
+### 2.10+ 组件
 - **组件构建器** (`lay-component`) - 2.10+ 新增的重要模块
 - **新标签页** (`lay-tabs`) - 替代旧的 tab 组件
 - **颜色选择器** (`lay-colorpicker`)
@@ -29,13 +73,15 @@
 - **日期选择器** (`lay-laydate`)
 
 ### 基础组件
-- **CDN 引用** (`lay-cdn:2.11.6`) - 最新版本 CDN
-- **容器布局** (`lay-con`, `lay-row`)
-- **按钮组件** (`lay-btn` 系列)
-- **表单组件** (`lay-form` 系列)
-- **导航组件** (`lay-nav` 系列)
-- **表格组件** (`lay-table`)
-- **弹出层** (`lay-layer` 系列)
+- **CDN 引用** (`lay-cdn:2.13.2`) - 最新版本 2.13.2 CDN
+- **CDN 引用** (`lay-cdn:2.11.6`) - 版本 2.11.6 CDN
+- **CDN 引用** (`lay-cdn:2.8.18`) - 版本 2.8.18 CDN
+- **容器布局** (`lay-con`, `lay-row`, `lay-rcon`)
+- **按钮组件** (`lay-btn` 系列 - 10+ 种样式)
+- **表单组件** (`lay-form` 系列 - 包含登录、注册面板)
+- **导航组件** (`lay-nav` 系列 - 5+ 种样式)
+- **表格组件** (`lay-table`, `lay-treetable`)
+- **弹出层** (`lay-layer` 系列 - 8+ 种用法)
 - **树组件** (`lay-tree`)
 - **更多...**
 
@@ -48,9 +94,11 @@
 ### 示例
 
 ```html
-<!-- 输入 lay-cdn:2.11.6 生成最新版本 CDN -->
-<link rel="stylesheet" media="screen" href="https://cdn.staticfile.org/layui/2.11.6/css/layui.min.css">
-<script src="https://cdn.staticfile.org/layui/2.11.6/layui.min.js"></script>
+<!-- 输入 lay-cdn:2.13.2 生成最新版本 CDN -->
+<!-- 引入 layui.css -->
+<link href="https://unpkg.com/layui@2.13.2/dist/css/layui.css" rel="stylesheet">
+<!-- 引入 layui.js -->
+<script src="https://unpkg.com/layui@2.13.2/dist/layui.js"></script>
 
 <!-- 输入 lay-tabs 生成新标签页组件 -->
 <div id="test-tabs"></div>
@@ -74,11 +122,33 @@ layui.use('tabs', function(){
 
 ## 📝 更新日志
 
+### v0.3.0 (2025-01-29)
+- 🎉 **重大更新**: 添加 5 个重要缺失组件
+- ✨ **新增组件**: 
+  - 基础菜单 Menu (`lay-menu`) - 垂直导航菜单替代方案
+  - 树形表格 TreeTable (`lay-treetable`) - 树形数据表格 (2.8+)
+  - 栅格系统 Grid (`lay-grid` 系列) - 响应式布局系统
+  - 图标 Icon (`lay-icon` 系列) - 图标使用示例
+  - 模板引擎 Laytpl (`lay-laytpl` 系列) - 模板引擎使用
+- 🐛 **Bug 修复**:
+  - 修复 lay-form 中残留的 HTML 语法错误
+  - 修复 lay-upload 中的 jQuery 使用问题 (统一使用 layui.$)
+- 📊 **完整度**: 现在包含 50+ 个 Layui 组件代码片段，覆盖率 ~95%
+
+### v0.2.0 (2025-01-29)
+- 🚀 **重大更新**: 升级到 Layui 2.13.2 最新版本
+- 🐛 **Bug 修复**: 修复 11 处严重错误
+  - 修复 8 处 API 调用错误 (lay.msg → layer.msg)
+  - 修复 2 处 HTML 语法错误 (class 属性和 autocomplete)
+  - 修复 1 处属性拼写错误 (lay-serarch → lay-search)
+- ✨ **新增**: 添加 2.13.2 版本 CDN 代码片段
+- 🔄 **优化**: 更新固定条组件 CDN 版本
+- 📚 **向下兼容**: 保留 2.11.6 和 2.8.18 版本支持
+
 ### v0.1.0 (2025-01-27)
-- 🎉 重大更新：支持 Layui 2.11.6 最新版本
+- 🎉 重大更新：支持 Layui 2.11.6 版本
 - 新增 12 个 2.10+ 新组件代码片段
 - 优化现有代码片段，提升开发体验
-- 更新插件版本号和描述信息
 
 ### v0.0.6
 - 支持 Layui 2.8.18 版本
